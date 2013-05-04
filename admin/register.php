@@ -11,6 +11,20 @@ if (isset($_POST['send'])) {
 		$exist = $db->load('users')->get($_POST['name']);
 		if ($exist == "") {
 			$db->load('users')->set($_POST['name'], array('mail' => $_POST['mail'], 'pass' => md5($_POST['pass'])));
+			
+			$db->load('links')->set($_POST['name'],
+				array(
+					'colors' => array('bg' => '#333', 'fg' => 'white'),
+					'names' => array(
+						'name1' => array('name' => '', 'link' => ''),
+						'name2' => array('name' => '', 'link' => ''),
+						'name3' => array('name' => '', 'link' => ''),
+						'name4' => array('name' => '', 'link' => ''),
+						'name5' => array('name' => '', 'link' => ''),
+					),
+				)
+			);
+			
 			header('Location: http://mppp.tk/manage');
 		} else {
 			echo('<div class="alert red">User <a href="/'. $_POST['name'] .'/">'. $_POST['name'] .'</a> already exists</div>');

@@ -11,7 +11,7 @@ $fg = $data['colors']['fg'];
 <html lang="es">
 	<head>
 		<meta charset="utf-8" />
-		<title>mario</title>
+		<title><?php echo $user ?></title>
 		<link rel="stylesheet" href="/usersstyle.css" type="text/css" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
             <style>
