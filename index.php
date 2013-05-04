@@ -1,3 +1,5 @@
+<?php if (isset($_COOKIE['user'])) { header('Location: http://mppp.tk/manage'); } ?>
+
 <!DOCTYPE html>
 <html>
     <head>
