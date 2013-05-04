@@ -1,0 +1,39 @@
+* {-moz-box-sizing:    border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+html, body {
+	background: white;
+	color: #333;
+	font: 20px 'Lato', sans-serif;
+	width: 100%; max-width: 850px;
+	margin: 0 auto; padding: 10px;
+}
+p { text-align: justify; }
+
+.alert { 
+	color: white;
+	font-size: 20px;
+        border-radius: 6px;
+	padding: 5px 10px;
+	text-align: center;
+	text-decoration: none;
+}
+.green { background: #2ECC71}
+.red { background: #E74C3C}
+.alert a { color: white; font-weight: bold; text-decoration: none;}
+
+.identify { width: 60%; margin: 0 auto; }
+input {
+	background: white;
+	color: #AAA;
+	font-size: 20px;
+	border: 2px solid #DFDFDF;
+	border-radius: 6px;
+	padding: 5px 10px; margin: 2px 0;
+	width: 100%;
+	outline: none;
+}
+input:focus { color: #2ECC71; border-color: #2ECC71; }
+input[type=submit] { background: #3498db; color: white; border: 0; }
+input[type=submit]:active { background: #2980b9 }
+
+.linkeitor input:nth-child(odd) { width: 20%; border-right-width: 1px;}
+.linkeitor input:nth-child(even) { width: 80%; border-left-width: 1px; }

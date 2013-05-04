@@ -1,0 +1,31 @@
+html, body {
+	font: 25px 'Lato', Sans, sans-serif;
+}
+
+#main {
+	margin-top: 200px; margin-left: 200px;
+}
+
+#main .title {
+	font-size: 50px;
+	display: block;
+	margin-bottom: 15px;
+}
+a {
+	text-decoration: none;
+	display: block;
+}
+
+#advert {
+	font-size: 15px;
+	padding: 7px;
+	position: fixed;
+	bottom: 0; right: 0;
+}
+
+::selection { background: white; color: #7C3 }
+::-moz-selection { background: white; color: #7C3 }
+
+@media screen and (max-width: 600px) {
+	#main { margin: 10px !important; }
+}

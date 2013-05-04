@@ -1,0 +1,9 @@
+Options +FollowSymlinks 
+RewriteEngine on
+
+RewriteBase /
+RewriteRule ^manage$ admin/manage.php [NC]
+RewriteRule ^logout$ admin/logout.php [NC]
+RewriteRule ^(.*)/$ admin/user.php?user=$1
+
+ErrorDocument 404 /404.php
