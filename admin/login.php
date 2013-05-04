@@ -17,7 +17,6 @@ if (isset($_POST['send'])) {
 ?>
 
         <h2>Login</h2>
-        <p>To edit your links you have to be logged in.</p>
         <form method="post" action="" class="identify">
             <input type="text" placeholder="Your User" name="name" autofocus="autofocus" /><br />
             <input type="password" placeholder="Your Password" name="pass" /><br />

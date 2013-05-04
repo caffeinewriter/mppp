@@ -6,7 +6,7 @@ if (isset($_POST['send'])) {
 		echo('<div class="alert red">All fields must be set</div>');
 	} else {
 		require('admin/db/flintstone.php');
-		$db = new Flintstone(array('dir' => 'db/'));
+		$db = new Flintstone(array('dir' => 'admin/db/'));
 	
 		$exist = $db->load('users')->get($_POST['name']);
 		if ($exist == "") {

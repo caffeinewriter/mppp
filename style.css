@@ -7,6 +7,7 @@ html, body {
 	margin: 0 auto; padding: 10px;
 }
 p { text-align: justify; }
+a { text-decoration: none; color: #2ECC71; }
 
 .alert { 
 	color: white;

@@ -13,5 +13,7 @@
         <p>This is a website which allows you to create a profile page with all the links to your web services like twitter, youtube, facebook, flickr, tumblr... so you'll need to share only onle link instead of ten!</p>
         <?php require('admin/register.php') ?>
         
+        <h2>Manage your acount</h2>
+        <p>If you want to manage your existing acount, you have to <a href="/manage">login.</a></p>
     </body>
 </html>
