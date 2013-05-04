@@ -11,9 +11,9 @@ if (isset($_POST['send'])) {
 		$exist = $db->load('users')->get($_POST['name']);
 		if ($exist == "") {
 			$db->load('users')->set($_POST['name'], array('mail' => $_POST['mail'], 'pass' => md5($_POST['pass'])));
-			echo('<div class="alert green">Succesful regisration.<a href="/manage">Manage your acount</a>.</div>');
+			header('Location: http://mppp.tk/manage');
 		} else {
-			echo('<div class="alert red">User "' . $_POST['name'] . '" already exists</div>');
+			echo('<div class="alert red">User <a href="/'. $_POST['name'] .'/">'. $_POST['name'] .'</a> already exists</div>');
 		}
 	}
 } 
