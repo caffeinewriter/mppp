@@ -20,8 +20,7 @@ a { text-decoration: none; color: #2ECC71; }
 .green { background: #2ECC71}
 .red { background: #E74C3C}
 .alert a { color: white; font-weight: bold; text-decoration: none;}
-
-.identify { width: 60%; margin: 0 auto; }
+form { width: 60%; margin: 0 auto }
 input {
 	background: white;
 	color: #AAA;
@@ -30,11 +29,12 @@ input {
 	border-radius: 6px;
 	padding: 5px 10px; margin: 2px 0;
 	width: 100%;
+	-webkit-appearance: none;
 	outline: none;
 }
 input:focus { color: #2ECC71; border-color: #2ECC71; }
 input[type=submit] { background: #3498db; color: white; border: 0; }
 input[type=submit]:active { background: #2980b9 }
-
+.linkeitor { width: 100% }
 .linkeitor input:nth-child(odd) { width: 20%; border-right-width: 1px;}
 .linkeitor input:nth-child(even) { width: 80%; border-left-width: 1px; }

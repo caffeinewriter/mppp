@@ -1,11 +1,8 @@
 <?php
 $user = $_GET['user'];
-require('db/flintstone.php');
-$db = new Flintstone(array('dir' => 'db/'));
-$data = $db->load('links')->get($user);
-
-$bg = $data['colors']['bg'];
-$fg = $data['colors']['fg'];
+require('conn.php');
+$color = explode(',', mnget('colors', 'users', 'user', $user));
+$link = explode(',', mnget('links', 'users', 'user', $user));
 ?>
 <!doctype html>
 <html lang="es">
@@ -15,9 +12,9 @@ $fg = $data['colors']['fg'];
 		<link rel="stylesheet" href="/usersstyle.css" type="text/css" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
             <style>
-body { background: <?php echo $bg ?>; color: <?php echo $fg ?>; }
-a { color: <?php echo $fg ?>; }
-#advert { background: <?php echo $fg ?>; color: <?php echo $bg ?>; }
+body { background: <?php echo $color[0] ?>; color: <?php echo $color[1] ?>; }
+a { color: <?php echo $color[1] ?>; }
+#advert { background: <?php echo $color[1] ?>; color: <?php echo $color[0] ?>; }
             </style>
 	</head>
 	<body>
@@ -26,8 +23,10 @@ a { color: <?php echo $fg ?>; }
 			<span class="title"><?php echo $user ?></span>
 <?php
 
-foreach ($data['names'] as $link) {
-    echo('<a href="'. $link['link'] .'">'. $link['name'] .'</a>');
+for ($i=1; $i <= count($link) ; $i++ ) {
+	echo('
+            <a href="'. $link[$i] .'">'. $link[$i-1] .'</a>');
+	$i++;
 }
 
 ?>
