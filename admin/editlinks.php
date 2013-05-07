@@ -1,3 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Manage your MPPP</title>
+        <link rel="stylesheet" href="/style.css" />
+        <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    </head>
+    <body>
+
 <?php
 $user = $_COOKIE['user'];
 require('conn.php');
@@ -14,13 +25,13 @@ if (isset($_POST['send'])) {
 	}
 	mnupdate('users', 'links', $linkstosave , 'user', $_COOKIE['user']);
 
-echo('<div class="alert green">All saved, <a href="/'. $_COOKIE['user'] .'/">go to your page</a>.</div>');
+echo('<div class="alert green">All saved, <a href="/'. $_COOKIE['user'] .'">go to your page</a>.</div>');
 }
 
 ?>
-<h1>Edit your mppp <a href="/logout" class="alert red">Logout</a></h1>
+<h1>Edit your mppp <a href="/logout/" class="alert red">Logout</a></h1>
 
-<a href="/manage/colors">Edit Colors</a>
+<a href="/manage/colors/">Edit Colors</a>
 <form method="post" class="linkeitor">
                 <?php
 		$link = explode(',', mnget('links', 'users', 'user', $user));
@@ -33,3 +44,7 @@ echo('<div class="alert green">All saved, <a href="/'. $_COOKIE['user'] .'/">go 
                 ?>
             <input action="" type="submit" name="send" value="Guardar" />
 </form>
+
+
+    </body>
+</html>

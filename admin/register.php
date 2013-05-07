@@ -20,7 +20,7 @@ if (isset($_POST['send'])) {
 		mysql_close();
 		
 		/*setcookie('user', $user, time() + (10 * 365 * 24 * 60 * 60));*/
-		header('Location: /manage');
+		header('Location: /manage/');
 	}
 } 
 
@@ -28,7 +28,7 @@ if (isset($_POST['send'])) {
 
         <h2>Register</h2>
         <p>Create an acount at mppp.tk in order to use our services. It's easy, fast and good looking! Go ahead, it is also free.</p>
-        <form method="post" action="" class="identify">
+        <form method="post" class="identify">
             <input type="text" placeholder="username (4 - 30)" name="user" autofocus="autofocus" />
             <input type="password" placeholder="password" name="pass1" />
             <input type="password" placeholder="password" name="pass2" />

@@ -1,4 +1,4 @@
-<?php if (isset($_COOKIE['user'])) { header('Location: http://mppp.tk/manage'); } ?>
+<?php if (isset($_COOKIE['user'])) { header('Location: http://mppp.tk/manage/'); } ?>
 
 <!DOCTYPE html>
 <html>
@@ -12,10 +12,10 @@
     <body>
         <h1>mppp.tk</h1>
         <p>This is a website which allows you to create a profile page with all the links to your web services like twitter, youtube, facebook, flickr, tumblr... so you'll need to share only onle link instead of ten!</p>
-        <p>See an <a href="/mppp/">example</a>!</p>
+        <p>See an <a href="/mppp">example</a>!</p>
         <?php require('admin/register.php') ?>
         
         <h2>Manage your acount</h2>
-        <p>If you want to manage your existing acount, you have to <a href="/manage">login.</a></p>
+        <p>If you want to manage your existing acount, you have to <a href="/manage/">login.</a></p>
     </body>
 </html>

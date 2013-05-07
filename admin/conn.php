@@ -1,6 +1,6 @@
 <?php
-$conn = mysql_connect('localhost', 'mppp', 'password');
-mysql_select_db('mppp', $conn);
+$conn = mysql_connect('mysql.hostinger.es', 'u786676467_mppp', 'Mar.Nac18');
+mysql_select_db('u786676467_mppp', $conn);
 
 function mnget($get, $table, $where, $value) {
 	$value = mysql_real_escape_string($value);
