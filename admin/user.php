@@ -15,6 +15,9 @@ $link = explode(',', mnget('links', 'users', 'user', $user));
 body { background: <?php echo $color[0] ?>; color: <?php echo $color[1] ?>; }
 a { color: <?php echo $color[1] ?>; }
 #advert { background: <?php echo $color[1] ?>; color: <?php echo $color[0] ?>; }
+::selection { background: <?php echo $color[1] ?>; color: <?php echo $color[0] ?>; }
+::-moz-selection { background: <?php echo $color[1] ?>; color: <?php echo $color[0] ?>; }
+::-webkit-selection { background: <?php echo $color[1] ?>; color: <?php echo $color[0] ?>; }
             </style>
 	</head>
 	<body>

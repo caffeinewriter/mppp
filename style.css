@@ -3,7 +3,7 @@ html, body {
 	background: white;
 	color: #333;
 	font: 20px 'Lato', sans-serif;
-	width: 100%; max-width: 850px;
+	width: 100%; max-width: 500px;
 	margin: 0 auto; padding: 10px;
 }
 p { text-align: justify; }
@@ -17,9 +17,9 @@ a { text-decoration: none; color: #2ECC71; }
 	text-align: center;
 	text-decoration: none;
 }
-.green { background: #2ECC71}
-.red { background: #E74C3C}
-.alert a { color: white; font-weight: bold; text-decoration: none;}
+.green { background: #2ECC71 }
+.red { background: #E24646 }
+.alert a { color: white; font-weight: bold }
 
 #prevcolor {
 	width: 100%; height: 200px;
@@ -28,7 +28,6 @@ a { text-decoration: none; color: #2ECC71; }
 	border-radius: 6px;
 }
 
-form { width: 60%; margin: 0 auto }
 input {
 	background: white;
 	color: #AAA;
@@ -41,8 +40,20 @@ input {
 	outline: none;
 }
 input:focus { color: #2ECC71; border-color: #2ECC71; }
-input[type=submit] { background: #3498db; color: white; border: 0; }
-input[type=submit]:active { background: #2980b9 }
-.linkeitor { width: 100% }
-.linkeitor input:nth-child(odd) { width: 20%; border-right-width: 1px;}
-.linkeitor input:nth-child(even) { width: 80%; border-left-width: 1px; }
+input::-moz-focus-inner { border: 0 }
+
+input[type=submit] { background: #4686E3; color: white; border: 0 }
+input[type=submit]:active { background: #4280D9 }
+
+.linkeitor input:nth-child(even) { margin-bottom: 10px; }
+
+.navbar {
+	list-style: none;
+	background: #2ECC71;
+	color: white;
+	border-radius: 6px;
+  padding: 10px;
+}
+li {display: inline}
+li a { color: white; border-radius: 6px; padding: 5px; margin-bottom: 5px }
+li a:hover, li a.active { background: #29B866 }

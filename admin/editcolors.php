@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Manage your MPPP</title>
+        <title>manage mppp</title>
         <link rel="stylesheet" href="/style.css" />
         <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -22,13 +22,25 @@ if (isset($_POST['send'])) {
 $color = explode(',', mnget('colors', 'users', 'user', $_COOKIE['user']));
 
 ?>
-<h1>Edit your mppp <a href="/logout/" class="alert red">Logout</a></h1>
-<a href="/manage/">Edit Links</a>
+<h1>mppp</h1>
+
+<ul class="navbar">
+  <li>
+    <a href="/manage/">Edit links</a>
+  </li>
+  <li>
+    <a href="/manage/colors" class="active">Edit colors</a>
+  </li>
+  <li>
+    <a href="/logout/">Logout</a>
+  </li>
+</ul>
+
 <form method="post">
             Background<input type="text" id="colorfondo" name="colorfondo" onkeyup="changeColor()" placeholder="#77CC33" value="<?php echo $color[0] ?>" />
             Text<input type="text" id="colortexto" name="colortexto" onkeyup="changeColor()" placeholder="#CFCFCF" value="<?php echo $color[1] ?>" />
             <div id="prevcolor">How it will look :)</div>
-            <input action="" type="submit" name="send" value="Guardar" />
+            <input action="" type="submit" name="send" value="Save" />
 </form>
 
 <script type="text/javascript">

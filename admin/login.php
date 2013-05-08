@@ -16,7 +16,7 @@ if (isset($_POST['send'])) {
 		$pass = mnget( 'pass', 'users', 'user', $_POST['user'] );
 
 		if (md5($_POST['pass']) == $pass) {
-			setcookie('user', $_POST['user'], time() + (10 * 365 * 24 * 60 * 60));
+			setcookie('user', $_POST['user'], time() + (10 * 365 * 24 * 60 * 60), '/');
 			header('Location: /manage/');
 		}
 	} else {
